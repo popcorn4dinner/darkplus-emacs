@@ -29,8 +29,8 @@
 
 (deftheme darkplus)
 (let ((class '((class color) (min-colors 89)))
-       (dp_foreground    "#d4d4d4")
-       (dp_background    "#1e1e1e")
+       (dp_foreground    "#bac1d2")
+       (dp_background    "#282c36")
        (dp_grey          "#303030")
        (dp_pink          "#c586c0")
        (dp_light_blue    "#9cdcfe")
@@ -54,13 +54,13 @@
        (dp_grey7          "#707070")
        (dp_grey8          "#808080")
 
-       (fg1 "#d4d4d4")       ;; text
-       (fg2 "#c3c3c3")
+       (fg1 "#bac1d2")
+       (fg2 "#a6aab5")       ;; text
        (fg3 "#b2b2b2")
        (fg4 "#a1a1a1")
-       (bg1 "#1E1E1E")       ;; background
-       (bg2 "#303030")
-       (bg3 "#424242")
+       (bg1 "#282c36")       ;; background
+       (bg2 "#323744")
+       (bg3 "#3f4554")
        (bg4 "#545454")
        (builtin "#569CD6")   ;; dark-blue
        (keyword "#C586C0")   ;; pink
@@ -94,18 +94,18 @@
     `(font-lock-warning-face              ((,class (:foreground ,warning :background ,bg2))))
 
     ;; GENERAL
-    `(cursor                   ((,class (:background ,dp_bright_blue                   ))))
-    `(mouse                    ((,class (:background ,dp_select_blue                   ))))
+    ;; `(cursor                   ((,class (:background ,dp_bright_blue                   ))))
+    ;; `(mouse                    ((,class (:background ,dp_select_blue                   ))))
     `(region                   ((,class (:background ,dp_select_blue                   ))))
     `(highlight                ((,class (:foreground ,fg3 :background ,dp_select_blue  ))))
     `(hl-line                  ((,class (:background ,bg2                              ))))
     `(highlight-numbers-number ((,class (:foreground ,dp_puke                          ))))
-    `(line-number              ((,class (:background ,bg2                              ))))
+    `(line-number              ((,class (:background ,bg2 :foreground, fg4             ))))
     `(line-number-current-line ((,class (:background ,bg2                              ))))
 	  `(fringe                   ((,class (:background ,dp_background :foreground ,fg4   ))))
     `(show-paren-match-face    ((,class (:background ,warning                          ))))
     `(isearch                  ((,class (:foreground ,warning :background ,bg3 :bold t ))))
-    `(vertical-border          ((,class (:foreground ,fg3                              ))))
+    `(vertical-border          ((,class (:foreground ,bg3                              ))))
     `(minibuffer-prompt        ((,class (:foreground ,keyword :bold t                  ))))
     `(default-italic           ((,class (:italic t                                     ))))
     `(link                     ((,class (:foreground ,dp_light_blue :underline t       ))))
