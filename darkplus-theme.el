@@ -101,7 +101,7 @@
     `(highlight                ((,class (:foreground ,fg3 :background ,dp_select_blue  ))))
     `(hl-line                  ((,class (:background ,bg2                              ))))
     `(highlight-numbers-number ((,class (:foreground ,dp_puke                          ))))
-    `(line-number              ((,class (:background ,bg0 :foreground, bg3             ))))
+    `(line-number              ((,class (:background ,bg1 :foreground, bg3             ))))
     `(line-number-current-line ((,class (:background ,bg2                              ))))
 	  `(fringe                   ((,class (:background ,dp_background :foreground ,fg4   ))))
     `(show-paren-match-face    ((,class (:background ,warning                          ))))
@@ -182,8 +182,17 @@
 
 
     ;; MODE LINE
-    `(mode-line                    ((,class (:foreground ,fg4           :background ,bg0 :bold t             ))))
-    `(mode-line-inactive           ((,class (:foreground ,var           :background ,bg0 :weight normal      ))))
+    `(mode-line
+      ((,class (:inverse-video unspecified
+                               :overline ,bg2
+                               :underline ,bg2
+                               :foreground ,fg3
+                               :background ,bg0
+                               :box (:line-width 1 :color ,bg0
+                                                 :style unspecified)))))
+
+    ;; `(mode-line                    ((,class (:foreground ,fg4           :background ,bg0 :bold t             ))))
+    ;; `(mode-line-inactive           ((,class (:foreground ,var           :background ,bg0 :weight normal      ))))
     `(mode-line-buffer-id          ((,class (:foreground ,dp_green      :background nil :bold t             ))))
     `(mode-line-buffer-id-inactive ((,class (:foreground ,fg1           :background nil                     ))))
     `(mode-line-highlight          ((,class (:foreground ,keyword       :background nil :weight bold        ))))
