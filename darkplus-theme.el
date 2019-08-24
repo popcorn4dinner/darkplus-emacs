@@ -66,7 +66,7 @@
        (builtin "#569CD6")   ;; dark-blue
        (keyword "#C586C0")   ;; pink
        (const   "#9CDCFE")   ;; light-blue
-       (comment "#505050")   ;; green
+       (comment fg3)   ;; green
        (func    "#DCDCAA")   ;; yellow
        (str     "#CE9178")   ;; orange
        (type    "#4EC9B0")   ;; seafoam
@@ -135,14 +135,14 @@
     `(org-document-info-keyword    ((,class (:foreground ,dp_grey5                        ))))
     `(org-meta-line                ((,class (:foreground ,dp_grey5                        ))))
     `(org-hide                     ((,class (:foreground ,fg4                             ))))
-    ;; `(org-level-1                  ((,class (:foreground ,dp_bright_blue :bold t :height 1.1))))
-    ;; `(org-level-2                  ((,class (:foreground ,dp_dark_blue   :bold nil        ))))
-    ;; `(org-level-3                  ((,class (:foreground ,dp_pink        :bold t          ))))
-    ;; `(org-level-4                  ((,class (:foreground ,dp_green       :bold nil        ))))
-    ;; `(org-level-5                  ((,class (:foreground ,dp_foreground  :bold nil        ))))
-    ;; `(org-level-6                  ((,class (:foreground ,dp_foreground  :bold nil        ))))
-    ;; `(org-level-7                  ((,class (:foreground ,dp_foreground  :bold nil        ))))
-    ;; `(org-level-8                  ((,class (:foreground ,dp_foreground  :bold nil        ))))
+    `(org-level-1                  ((,class (:background nil                              ))))
+    `(org-level-2                  ((,class (:background nil                              ))))
+    `(org-level-3                  ((,class (:background nil                              ))))
+    `(org-level-4                  ((,class (:background nil                              ))))
+    `(org-level-5                  ((,class (:background nil                              ))))
+    `(org-level-6                  ((,class (:background nil                              ))))
+    `(org-level-7                  ((,class (:background nil                              ))))
+    `(org-level-8                  ((,class (:background nil                              ))))
     `(org-footnote                 ((,class (:foreground ,fg4            :underline t     ))))
     `(org-link                     ((,class (:foreground ,dp_light_blue  :underline t     ))))
     `(org-list-dt                  ((,class (:foreground ,dp_light_blue  :underline t     ))))
@@ -182,17 +182,9 @@
 
 
     ;; MODE LINE
-    `(mode-line
-      ((,class (:inverse-video unspecified
-                               :overline ,bg2
-                               :underline ,bg2
-                               :foreground ,fg3
-                               :background ,bg0
-                               :box (:line-width 1 :color ,bg0
-                                                 :style unspecified)))))
 
-    ;; `(mode-line                    ((,class (:foreground ,fg4           :background ,bg0 :bold t             ))))
-    ;; `(mode-line-inactive           ((,class (:foreground ,var           :background ,bg0 :weight normal      ))))
+    `(mode-line                    ((,class (:foreground ,fg4           :background ,bg0 :bold t             ))))
+    `(mode-line-inactive           ((,class (:foreground ,var           :background ,bg0 :weight normal      ))))
     `(mode-line-buffer-id          ((,class (:foreground ,dp_green      :background nil :bold t             ))))
     `(mode-line-buffer-id-inactive ((,class (:foreground ,fg1           :background nil                     ))))
     `(mode-line-highlight          ((,class (:foreground ,keyword       :background nil :weight bold        ))))
